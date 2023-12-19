@@ -1,2 +1,4 @@
 pytube
 ffmpeg-python
+bing-image-downloader
+moviepy

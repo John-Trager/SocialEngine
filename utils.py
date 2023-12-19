@@ -6,7 +6,6 @@ import logging
 import os
 import ffmpeg
 
-
 def start_logging(to_file= True, level=logging.INFO):
     """
     function to start logging to a file

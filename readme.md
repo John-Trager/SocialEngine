@@ -14,7 +14,7 @@ List of ideas for short video formats
 - cherry-picking most interesting parts of videos (based on replay data from youtube)
     - hasn't been done?? - edge
 
-This will be are bread and butter so will need more of these ideas
+This will be our bread and butter so will need more of these ideas
 
 ## Engine Architecture
 

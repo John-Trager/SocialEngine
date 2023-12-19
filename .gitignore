@@ -16,3 +16,11 @@ venv.bak/
 # project specific 
 videos/*
 logs/*
+images/*
+vs_shorts_1/*
+test.ipynb
+
+*.mp4
+*.jpg
+*.mp3
+*.csv
