@@ -1,6 +1,11 @@
 # Social Engine
 Automate Short form content
 
+## Current Experiments
+
+Would you rather shorts (pretty low qualitiy for now)
+[Youtube Channel - Rather Paradise 🎥](https://www.youtube.com/@RatherParadise)
+
 ## Edge - Why this will work
 Short form video is saturated - along with automation, *but* there are still niches and unique/new formats that can be created and capitalized on.
 
