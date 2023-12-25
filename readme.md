@@ -20,3 +20,10 @@ This will be our bread and butter so will need more of these ideas
 
 Need to create a easy library that can load videos and audio and save in short type format which is 9:16 format (the long way)
 
+
+# Bottlenecks  
+- youtube upload automation amount 
+    - official API only allows for 6 uploads per day 
+    - try to fix with selenium or some other way around it?
+
+

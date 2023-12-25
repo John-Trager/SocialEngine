@@ -10,8 +10,11 @@ from moviepy.editor import *
 if __name__ == "__main__":
     start_logging(to_file=True)
 
+    file_name = "vs_topics_2.csv"
+    out_dir = "vs_shorts_2"
+
     entries = []
-    with open("vs_topics_1.csv", "r") as file:
+    with open(file_name, "r") as file:
         reader = csv.reader(file)
         for row in reader:
             entries.append(row)
@@ -81,6 +84,8 @@ if __name__ == "__main__":
 
         logging.info(f"Got image for {optionTwo}")
 
+        ### Create the video ###
+
         # Load the image
         image_path = "images/wur_background.jpg"
         image = ImageClip(image_path)
@@ -98,7 +103,7 @@ if __name__ == "__main__":
                 stroke_color="black",
                 color="white",
             )
-            .set_position(("center", 0.01), relative=True)
+            .set_position(("center", 0.03), relative=True)
             .set_duration(video_duration)
         )
 
@@ -113,7 +118,7 @@ if __name__ == "__main__":
                 stroke_color="black",
                 color="white",
             )
-            .set_position(("center", 0.92), relative=True)
+            .set_position(("center", 0.56), relative=True)
             .set_duration(video_duration - bottom_text_start)
             .set_start(bottom_text_start)
         )
@@ -128,7 +133,7 @@ if __name__ == "__main__":
 
         optionTwoImage = (
             ImageClip(optionTwoImage)
-            .set_position(("center", 0.6), relative=True)
+            .set_position(("center", 0.63), relative=True)
             .set_duration(video_duration - bottom_text_start)
             .set_start(bottom_text_start)
             .resize(height=600)
@@ -143,7 +148,7 @@ if __name__ == "__main__":
         text_vote_top = (
             TextClip(
                 str(voteOne) + "%",
-                fontsize=80,
+                fontsize=90,
                 font="mrbeast",
                 stroke_width=3,
                 stroke_color="black",
@@ -158,13 +163,13 @@ if __name__ == "__main__":
         text_vote_bottom = (
             TextClip(
                 str(voteTwo) + "%",
-                fontsize=80,
+                fontsize=90,
                 font="mrbeast",
                 stroke_width=3,
                 stroke_color="black",
                 color="white",
             )
-            .set_position((0.2, 0.53), relative=True)
+            .set_position((0.2, 0.50), relative=True)
             .set_duration(video_duration - result_start_time)
             .set_start(result_start_time)
         )
@@ -200,7 +205,7 @@ if __name__ == "__main__":
 
         # Write the video to the file
         video.write_videofile(
-            f"vs_shorts_1/{optionOne}_vs_{optionTwo}.mp4", audio_codec="aac", fps=30
+            f"{out_dir}/{optionOne}_vs_{optionTwo}.mp4", audio_codec="aac", fps=30
         )
 
         logging.info(f"Created video for {optionOne} vs {optionTwo}")
